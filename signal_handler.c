@@ -4,9 +4,10 @@
  */
 
 /**
- * Modified by:
- * 
- * Brief summary of modifications:
+ * File: signal_alarm.c
+ * Modified by: Giovanni Guaman
+ * Date: 11/5/2025
+ * Brief summary of program: this program is testing the signal handler for SIGINT.
  */
 
 
@@ -18,15 +19,19 @@
 /**
  * @brief Signal handler for SIGINT - prints a message and exits
  */
-void handle_signal() {
-    printf("Received a signal\n");
-    exit(1);
-}
+
+ //Removing the signal handler function for the 2nd part of the 1st task.
+
+// void handle_signal() {
+//   printf("\nReceived a signal\n");
+//   exit(1);
+//  }
 
 int main() {
 
     // Register for the signal
-    signal(SIGINT, handle_signal);
+    // removing the signal handler.
+    //signal(SIGINT, handle_signal);
 
     // Wait until a signal is received
     while(1) {
